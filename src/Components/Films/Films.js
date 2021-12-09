@@ -8,16 +8,14 @@ function Films(props) {
     const filmsList = films.map((film) => <li><h3>{film.name}</h3>Купить за {film.cost}₽<Stars count={film.count} /></li>);
 
     return (
-        <div>
-            <ul>
-                {filmsList}            
-            </ul>
-        </div>
+        <ul>
+            {filmsList}            
+        </ul>
     )
 }
 
 Films.propTypes = {
-    films: PropTypes.array
+    films: PropTypes.array.isRequired
 }
 
 export default Films
